@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<title>Encontra Alunos</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/response.css">
+
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato|Noto+Sans+JP|Open+Sans|Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+		<div th:replace="fragmentos/header :: header"></div>
+
+				<div class="container" style="margim-top: 50px;">
+
+						<h4>Encontra Alunos</h4>
+                        <form method="post">
+                          <div class="input-group col-6  offset-3">
+                               <input class="form-control"  placeholder="Busque por o nome do aluno.">
+                               <div  class="input-group-append">
+                                  <button  type="submit" class="btn btn-outline-secodary">Pesquisar</button>
+                               </div>
+                          </div>
+                        
+                        </form>
+                        <br>
+						<div class="row">
+								<div class="card" style="width: 288px;">
+										<a th:href="@{/alunos-ativos}"><img class="card-img-top"  src="img/my_avatar.jpg"></a>
+										<div class="card-body">
+												<h5 class="card-title">Alunos Ativos</h5>
+												<p class="card-text">Busque por todos alunos que estão ativos no sitema.</p>
+												<a th:href="@{/alunos-ativos}" class="btn btn-outiline-primary">Clique aqui</a>
+										</div>
+
+								</div>
+						<!-- Alunos Inativos -->
+
+						<div class="card" style="width: 288px;">
+								<a th:href="@{/alunos-inativos}" ><img class="card-img-top" alt="" src="img/my_avatar.jpg"></a>
+								<div class="card-body">
+										<h5 class="card-title">Alunos inativos</h5>
+										<p class="card-text">Busque por todos alunos que estão inativos no sistema.</p>
+										<a th:href="@{/alunos-inativos}" class="btn btn-outiline-primary">Clique aqui</a>
+								</div>
+
+						</div>
+						
+						<!-- Alunos cancelados -->
+						
+						<div class="card" style="width: 288px;">
+								<a th:href="@{/alunos-cancelados}"><img class="card-img-top" alt="" src="img/my_avatar.jpg"></a>
+								<div class="card-body">
+										<h5 class="card-title">Alunos Cancelados</h5>
+										<p class="card-text">Busque por todos alunos que estão cancelados no sistema.</p>
+										<a th:href="@{/alunos-cancelados}" class="btn btn-outiline-primary">Clique aqui</a>
+								</div>
+
+						</div>
+						
+						<!-- Alunos trancados -->
+						
+						<div class="card mt-3 " style="width: 288px;">
+								<a th:href="@{/alunos-trancados}"><img class="card-img-top" alt="" src="img/my_avatar.jpg"></a>
+								<div class="card-body">
+										<h5 class="card-title">Alunos trancados</h5>
+										<p class="card-text">Busque por todos alunos que estão trancados no sistema.</p>
+										<a th:href="@{/alunos-trancados}" class="btn btn-outiline-primary">Clique aqui</a>
+								</div>
+
+						</div>
+				</div>
+						
+				</div>
+
+				<div th:replace="fragmentos/rodape :: rodape"></div>
+				
+				
+				<script type="text/javascript" src="js/main.js"></script>
+				<script src="/webjars/jquery/jquery.min.js"></script>
+				<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
