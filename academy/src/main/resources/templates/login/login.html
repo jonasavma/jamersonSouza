@@ -23,7 +23,7 @@
                  <div class="texto-header" >
                      <h2>Admin Login</h2>
                      <p>Insira suas crendencias para efetuar login no sistema</p>
-                     <form  method="post" action="/login"  th:object="${usuario}">
+                     <form  method="post" action="/login"  th:object="${usuarioOBJ}">
                          <div class="alert alert-danger"  role="alert"  th:if="${msg}">
                             <strong th:text="${msg}"></strong>
                          </div>

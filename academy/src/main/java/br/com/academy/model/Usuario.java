@@ -47,8 +47,6 @@ public class Usuario implements Serializable {
 	this.email = email;
     }
 
-  
-
    
 
     public String getNome() {

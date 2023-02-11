@@ -33,9 +33,12 @@ public class UsuarioController {
 
 	ModelAndView mView = new ModelAndView();
 	mView.setViewName("login/login");
+	mView.addObject("usuarioOBJ", new Usuario());
 	return mView;
 
     }
+    
+   
     
     @GetMapping("/index")
     public ModelAndView index() {
