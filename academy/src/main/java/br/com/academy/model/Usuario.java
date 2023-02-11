@@ -2,6 +2,7 @@ package br.com.academy.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,14 +20,16 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
-    @Email
+
+   @Email
     private String email;
-    
-    @Size(min = 3,max = 20,message = "Usuario deve conter entre 3 a 20 caracteres")
-    private String usuario;
+
+    @Size(min = 3, max = 20, message = "Usuario deve conter entre 3 a 20 caracteres")
+    @Column(name = "nome")
+    private String nome;
+
     private String senha;
+
 
     public Long getId() {
 	return id;
@@ -44,12 +47,16 @@ public class Usuario implements Serializable {
 	this.email = email;
     }
 
-    public String getUsuario() {
-	return usuario;
+  
+
+   
+
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsuario(String usuario) {
-	this.usuario = usuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSenha() {
